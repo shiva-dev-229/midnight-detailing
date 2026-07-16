@@ -226,6 +226,13 @@
       transition: color .3s var(--ease);
     }
     .nav-links .nav-link:hover { color: var(--text-primary); }
+    .nav-ig {
+      display: flex;
+      align-items: center;
+      color: var(--text-muted);
+      transition: color .3s var(--ease);
+    }
+    .nav-ig:hover { color: var(--text-primary); }
     @media (max-width: 767px) {
       .nav-links .nav-link { display: none; }
     }
@@ -1119,6 +1126,7 @@
       color: var(--text-muted);
     }
     .f-col a[target="_blank"]::after { display: inline; }
+    .f-social { display: inline-flex; align-items: center; gap: 0.4375rem; }
     .f-plain { color: var(--text-muted); }
     .f-name { color: var(--text-secondary); }
     /* easter-egg trigger — looks like the other names, whispers on hover */
@@ -1373,6 +1381,9 @@
         <a class="nav-link" href="#services">Services</a>
         <a class="nav-link" href="#work">Work</a>
         <a class="nav-link" href="#contact">Contact</a>
+        <a class="nav-ig" href="https://www.instagram.com/detailing.midnight/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+        </a>
         <a class="cta cta--small" href="https://cal.com/midnight-detailing" target="_blank" rel="noopener">Book a detail</a>
       </nav>
     </div>
@@ -1659,8 +1670,10 @@
       </div>
       <nav class="f-col" aria-label="Reach us">
         <span class="f-head">Reach us</span>
-        <!-- TODO: replace # with the business Instagram URL -->
-        <a href="#">Instagram</a>
+        <a class="f-social" href="https://www.instagram.com/detailing.midnight/" target="_blank" rel="noopener">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+          Instagram
+        </a>
         <a href="https://cal.com/midnight-detailing" target="_blank" rel="noopener">Cal.com</a>
         <a href="tel:+12626669820">(262) 666-9820</a>
         <a class="f-break" href="mailto:Midnight.detailingra@gmail.com">Midnight.detailingra@gmail.com</a>
