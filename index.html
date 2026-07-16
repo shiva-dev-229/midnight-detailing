@@ -1,0 +1,1570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Midnight Detailing — Premium Car Detailing in Brookfield</title>
+  <meta name="description" content="Luxury interior and exterior car detailing serving the Brookfield area. Details from $50, add-ons available, flexible scheduling. Book online in under a minute.">
+  <meta property="og:title" content="Midnight Detailing — Premium Car Detailing in Brookfield">
+  <meta property="og:description" content="Luxury interior and exterior car detailing serving the Brookfield area. Details from $50, add-ons available, flexible scheduling. Book online in under a minute.">
+  <meta property="og:type" content="website">
+  <!-- NOTE: og:image / twitter:image must become absolute URLs (https://yourdomain.com/assets/og/og-image.jpg) once the site is deployed -->
+  <meta property="og:image" content="assets/og/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Midnight Detailing — Premium Car Detailing in Brookfield">
+  <meta name="twitter:description" content="Luxury interior and exterior car detailing serving the Brookfield area. Details from $50, add-ons available, flexible scheduling. Book online in under a minute.">
+  <meta name="twitter:image" content="assets/og/og-image.jpg">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="assets/logo/favicon.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": "Midnight Detailing",
+    "description": "Luxury interior and exterior car detailing serving the Brookfield, WI area.",
+    "telephone": "+1-262-666-9820",
+    "email": "Midnight.detailingra@gmail.com",
+    "areaServed": "Brookfield, WI",
+    "priceRange": "$50 - $160",
+    "image": "assets/og/og-image.jpg",
+    "potentialAction": {
+      "@type": "ReserveAction",
+      "target": "https://cal.com/midnight-detailing"
+    }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Inter:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    /* ============ TOKENS ============ */
+    :root {
+      --bg-base:        #0a0a0a;
+      --bg-deep:        #000000;
+      --text-primary:   #f5f5f3;
+      --text-secondary: rgba(245, 245, 243, 0.70);
+      --text-muted:     rgba(245, 245, 243, 0.55);
+      --hairline:       rgba(255, 255, 255, 0.14);
+      --hairline-strong:rgba(255, 255, 255, 0.40);
+      --hairline-ghost: rgba(255, 255, 255, 0.05);
+      --font-display: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
+      --font-body:    "Inter", -apple-system, "Segoe UI", Roboto, sans-serif;
+      --font-mono:    "IBM Plex Mono", "SF Mono", Menlo, Consolas, monospace;
+      --ease: cubic-bezier(0.16, 1, 0.3, 1);
+      --pad-x: clamp(1.25rem, 5vw, 3rem);
+    }
+
+    /* ============ BASE ============ */
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--bg-base);
+      color: var(--text-secondary);
+      font-family: var(--font-body);
+      font-size: 1rem;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    @media (max-width: 767px) {
+      body { font-size: 0.9375rem; }
+    }
+
+    ::selection { background: #f5f5f3; color: #000; }
+
+    h1, h2, h3 {
+      font-family: var(--font-display);
+      font-weight: 500;
+      color: var(--text-primary);
+      margin: 0;
+    }
+
+    p { margin: 0; }
+
+    section { scroll-margin-top: 4.5rem; }
+
+    .wrap {
+      max-width: 72rem;
+      margin-inline: auto;
+      padding-inline: var(--pad-x);
+    }
+
+    .section-pad { padding-block: clamp(5rem, 12vw, 8.5rem); }
+
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      line-height: 1;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .section-header {
+      font-size: clamp(1.875rem, 4.5vw, 3.25rem);
+      letter-spacing: -0.01em;
+      line-height: 1.1;
+      margin-top: 1.25rem;
+    }
+
+    /* ============ ATMOSPHERE: grain ============ */
+    .noise {
+      position: fixed;
+      inset: -50%;
+      width: 200%;
+      height: 200%;
+      z-index: 30;
+      pointer-events: none;
+      opacity: 0.05;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    /* ============ SCROLL PROGRESS ============ */
+    #progress {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--text-primary);
+      transform: scaleX(0);
+      transform-origin: left;
+      z-index: 60;
+      pointer-events: none;
+    }
+
+    /* ============ CTA ============ */
+    .cta {
+      display: inline-block;
+      padding: 1.125rem 3.25rem;
+      background: transparent;
+      border: 1px solid var(--hairline-strong);
+      border-radius: 0;
+      color: var(--text-primary);
+      font-family: var(--font-display);
+      font-size: 0.8125rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background-color .35s var(--ease),
+                  color .35s var(--ease),
+                  border-color .35s var(--ease);
+    }
+    .cta:hover {
+      background: var(--text-primary);
+      color: var(--bg-deep);
+      border-color: var(--text-primary);
+    }
+    .cta:focus-visible {
+      outline: 1px solid var(--text-primary);
+      outline-offset: 4px;
+    }
+    .cta--small { padding: 0.625rem 1.5rem; font-size: 0.6875rem; }
+
+    a:focus-visible {
+      outline: 1px solid var(--text-primary);
+      outline-offset: 4px;
+    }
+
+    /* ============ NAV ============ */
+    .site-nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 50;
+      border-bottom: 1px solid transparent;
+      transition: background-color .4s var(--ease), border-color .4s var(--ease);
+    }
+    .site-nav.scrolled {
+      background: rgba(0, 0, 0, 0.72);
+      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px);
+      border-bottom-color: var(--hairline);
+    }
+    .site-nav .wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding-block: 1rem;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+    }
+    .brand img { height: 38px; width: auto; display: block; border-radius: 50%; }
+    .wordmark {
+      display: inline;
+      font-family: var(--font-display);
+      font-weight: 500;
+      font-size: 1rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-primary);
+      white-space: nowrap;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    .nav-links .nav-link {
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--text-muted);
+      transition: color .3s var(--ease);
+    }
+    .nav-links .nav-link:hover { color: var(--text-primary); }
+    @media (max-width: 767px) {
+      .nav-links .nav-link { display: none; }
+    }
+    @media (max-width: 480px) {
+      /* badge-only brand: logo + full CTA can't share 360px with the wordmark */
+      .wordmark { display: none; }
+      .cta--small { padding: 0.625rem 1rem; }
+    }
+
+    /* ============ HERO ============ */
+    .hero {
+      position: relative;
+      background: var(--bg-deep);
+      min-height: 100svh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding-top: 5rem;
+      padding-bottom: 6rem;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: radial-gradient(ellipse 90% 55% at 50% -15%, rgba(255,255,255,0.08), transparent 70%);
+    }
+    /* blueprint column grid */
+    .hero-cols {
+      position: absolute;
+      inset: 0;
+      max-width: 72rem;
+      margin-inline: auto;
+      padding-inline: var(--pad-x);
+      display: flex;
+      pointer-events: none;
+    }
+    .hero-cols div {
+      flex: 1;
+      border-left: 1px solid var(--hairline-ghost);
+    }
+    .hero-cols div:last-child { border-right: 1px solid var(--hairline-ghost); }
+    /* inspection light: one pass down the hero on load */
+    .scan {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      top: -5%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.65), transparent);
+      box-shadow: 0 0 32px 3px rgba(255,255,255,0.22);
+      pointer-events: none;
+      opacity: 0;
+      animation: scan 2.8s var(--ease) 1s 1 both;
+    }
+    @keyframes scan {
+      0%   { top: -5%;  opacity: 0; }
+      12%  { opacity: 1; }
+      85%  { opacity: 1; }
+      100% { top: 105%; opacity: 0; }
+    }
+
+    /* cursor-following light (hover devices only) */
+    .spot {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: radial-gradient(560px circle at var(--mx, 50%) var(--my, 30%), rgba(255,255,255,0.06), transparent 65%);
+      opacity: 0;
+      transition: opacity .6s var(--ease);
+    }
+    .hero.spot-on .spot { opacity: 1; }
+
+    .hero .wrap {
+      position: relative;
+      width: 100%;
+    }
+    .hero .eyebrow {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border: 1px solid var(--hairline);
+      animation: rise .8s var(--ease) .2s both;
+    }
+    .hero-title {
+      font-size: clamp(3rem, 14vw, 9.5rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 0.95;
+      text-transform: uppercase;
+      margin-block: 2rem 1.75rem;
+    }
+    .hero-title .line {
+      display: block;
+      overflow: hidden;
+      padding-bottom: 0.06em; /* keep descender-free glyph edges unclipped */
+      margin-bottom: -0.06em;
+    }
+    .hero-title .ch {
+      display: inline-block;
+      transform: translateY(120%);
+      animation: chRise .9s var(--ease) calc(0.45s + var(--i) * 0.045s) forwards;
+    }
+    @keyframes chRise { to { transform: none; } }
+    .line--outline .ch {
+      color: transparent;
+      -webkit-text-stroke: 1.5px rgba(245, 245, 243, 0.55);
+    }
+    @supports not (-webkit-text-stroke: 1px #fff) {
+      .line--outline .ch { color: var(--text-muted); }
+    }
+    .hero .subline {
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-size: clamp(1rem, 2.5vw, 1.375rem);
+      letter-spacing: 0.12em;
+      line-height: 1.5;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      max-width: 40ch;
+      margin-bottom: 3rem;
+      animation: rise .8s var(--ease) 1.35s both;
+    }
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      animation: rise .8s var(--ease) 1.5s both;
+    }
+    .ghost-link {
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 0.375rem;
+      transition: color .3s var(--ease), border-color .3s var(--ease);
+    }
+    .ghost-link:hover { color: var(--text-primary); border-bottom-color: var(--hairline-strong); }
+
+    .hero-hud {
+      position: absolute;
+      bottom: 2rem;
+      left: 0; right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      max-width: 72rem;
+      margin-inline: auto;
+      padding-inline: var(--pad-x);
+      font-family: var(--font-mono);
+      font-size: 0.625rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      animation: rise .8s var(--ease) 1.8s both;
+    }
+    .scroll-cue { display: flex; align-items: center; gap: 0.875rem; }
+    .cue-line {
+      display: inline-block;
+      width: 56px;
+      height: 1px;
+      background: var(--hairline-strong);
+      transform-origin: left;
+      animation: cue 2.4s var(--ease) infinite;
+    }
+    @keyframes cue {
+      0%   { transform: scaleX(0);   opacity: 0; }
+      45%  { transform: scaleX(1);   opacity: 1; }
+      100% { transform: scaleX(1);   opacity: 0; }
+    }
+    @media (max-width: 639px) {
+      .hero-hud .hud-meta { display: none; }
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: none; }
+    }
+
+    /* ============ MARQUEE ============ */
+    .marquee {
+      overflow: hidden;
+      border-block: 1px solid var(--hairline);
+      background: var(--bg-deep);
+      padding-block: 1.375rem;
+      user-select: none;
+    }
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marquee 46s linear infinite;
+    }
+    .marquee-seg {
+      display: flex;
+      flex-shrink: 0;
+      white-space: nowrap;
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-size: clamp(1.75rem, 4.5vw, 3.25rem);
+      line-height: 1.1;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(245, 245, 243, 0.38);
+    }
+    @supports not (-webkit-text-stroke: 1px #fff) {
+      .marquee-seg { color: var(--text-muted); }
+    }
+    .marquee-seg span { padding-inline: 1.5rem; }
+    @keyframes marquee { to { transform: translateX(-50%); } }
+
+    /* ============ REVEALS (IO-driven, cross-browser) ============ */
+    .js .reveal {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity .9s var(--ease), transform .9s var(--ease);
+    }
+    .js .reveal.in { opacity: 1; transform: none; }
+    .js .reveal:nth-child(2) { transition-delay: .08s; }
+    .js .reveal:nth-child(3) { transition-delay: .16s; }
+    .js .reveal:nth-child(4) { transition-delay: .24s; }
+    .js .reveal:nth-child(5) { transition-delay: .32s; }
+    .js .reveal:nth-child(6) { transition-delay: .40s; }
+
+    /* ============ SHUT-LINE (signature) ============ */
+    .shut-line {
+      position: relative;
+      height: 1px;
+      width: 100%;
+    }
+    .shut-line::before, .shut-line::after {
+      content: "+";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      background: var(--bg-base);
+      padding-inline: 0.375rem;
+      z-index: 1;
+    }
+    .shut-line::before { left: 0.375rem; }
+    .shut-line::after  { right: 0.375rem; }
+    .shut-track {
+      position: absolute;
+      inset: 0;
+      background: var(--hairline);
+      transform-origin: left;
+    }
+    .js .shut-line .shut-track {
+      transform: scaleX(0);
+      transition: transform 1.1s var(--ease);
+    }
+    .js .shut-line.in .shut-track { transform: scaleX(1); }
+    .shut-line-label {
+      position: absolute;
+      top: 50%;
+      left: var(--pad-x);
+      transform: translateY(-50%);
+      background: var(--bg-base);
+      padding: .5rem 1.125rem;
+      border: 1px solid var(--hairline);
+      font-family: var(--font-mono);
+      font-size: .625rem;
+      font-weight: 500;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      white-space: nowrap;
+      z-index: 2;
+    }
+    .js .shut-line .shut-line-label {
+      opacity: 0;
+      transition: opacity .9s var(--ease) .2s;
+    }
+    .js .shut-line.in .shut-line-label { opacity: 1; }
+
+    /* ============ SERVICES ============ */
+    .svc-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 1.5rem 2rem;
+      flex-wrap: wrap;
+      margin-top: 3rem;
+    }
+    .toolbar-note {
+      font-family: var(--font-mono);
+      font-size: 0.625rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .veh-toggle { display: flex; border: 1px solid var(--hairline); }
+    .veh-btn {
+      appearance: none;
+      background: transparent;
+      border: 0;
+      border-left: 1px solid var(--hairline);
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      font-size: 0.625rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 0.875rem 1.375rem;
+      cursor: pointer;
+      transition: background-color .3s var(--ease), color .3s var(--ease);
+    }
+    .veh-btn:first-child { border-left: 0; }
+    .veh-btn:hover { color: var(--text-primary); }
+    .veh-btn[aria-pressed="true"] { background: var(--text-primary); color: var(--bg-deep); }
+    .veh-btn:focus-visible { outline: 1px solid var(--text-primary); outline-offset: 3px; }
+    @media (max-width: 480px) {
+      .veh-btn { padding: 0.75rem 0.875rem; letter-spacing: 0.12em; }
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      margin-top: 1.75rem;
+      border-top: 1px solid var(--hairline);
+    }
+    .service {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      border-left: 1px solid var(--hairline);
+      padding: 2.75rem 2rem 5.5rem;
+      overflow: hidden;
+      transition: background-color .5s var(--ease);
+    }
+    .service:first-child { border-left: 0; }
+    .service:hover { background: rgba(255, 255, 255, 0.025); }
+    .service::before {
+      content: "";
+      position: absolute;
+      top: -1px; left: 0;
+      width: 100%;
+      height: 1px;
+      background: var(--text-primary);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .6s var(--ease);
+    }
+    .service:hover::before { transform: scaleX(1); }
+    .service::after {
+      content: attr(data-ghost);
+      position: absolute;
+      right: -0.375rem;
+      bottom: -1.75rem;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 6.5rem;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.09);
+      pointer-events: none;
+      transition: -webkit-text-stroke-color .5s var(--ease);
+    }
+    .service:hover::after { -webkit-text-stroke-color: rgba(255, 255, 255, 0.2); }
+    .svc-tag {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 0.625rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 1.75rem;
+    }
+    .service h3 {
+      font-size: 1.375rem;
+      letter-spacing: 0;
+      line-height: 1.25;
+      margin-bottom: 0.875rem;
+    }
+    .service .service-desc { margin-bottom: 1.75rem; }
+    .service ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      flex: 1 0 auto;
+    }
+    .service li {
+      padding-left: 1.375rem;
+      position: relative;
+      color: var(--text-secondary);
+      margin-bottom: 0.625rem;
+      font-size: 0.9375rem;
+    }
+    .service li::before {
+      content: "+";
+      position: absolute;
+      left: 0;
+      font-family: var(--font-mono);
+      color: var(--text-muted);
+    }
+    .svc-pop {
+      display: inline-block;
+      margin-left: 0.75rem;
+      padding: 0.25rem 0.625rem;
+      border: 1px solid var(--hairline-strong);
+      color: var(--text-primary);
+    }
+    .price-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--hairline);
+      position: relative;
+      z-index: 1;
+    }
+    .price-label {
+      font-family: var(--font-mono);
+      font-size: 0.625rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .price {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 2.25rem;
+      line-height: 1;
+      letter-spacing: -0.01em;
+      color: var(--text-primary);
+    }
+    .price.bump { animation: priceBump .45s var(--ease); }
+    @keyframes priceBump {
+      from { opacity: 0; transform: translateY(8px); }
+      to   { opacity: 1; transform: none; }
+    }
+
+    .addons { margin-top: 4.5rem; }
+    .addons-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border: 1px solid var(--hairline);
+      margin-top: 1.5rem;
+    }
+    .addon {
+      border-left: 1px solid var(--hairline);
+      padding: 1.75rem 1.5rem;
+      transition: background-color .4s var(--ease);
+    }
+    .addon:first-child { border-left: 0; }
+    .addon:hover { background: rgba(255, 255, 255, 0.025); }
+    .addon-name {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+    .addon-price {
+      display: block;
+      margin-top: 0.875rem;
+      font-family: var(--font-display);
+      font-weight: 500;
+      font-size: 1.375rem;
+      line-height: 1;
+      color: var(--text-primary);
+    }
+    @media (max-width: 767px) {
+      .services-grid { grid-template-columns: 1fr; border-top: 0; }
+      .service {
+        border-left: 0;
+        border-top: 1px solid var(--hairline);
+        padding: 2.5rem 0 4.5rem;
+      }
+      .service::after { font-size: 5rem; bottom: -1.25rem; }
+      .service h3 { font-size: 1.25rem; }
+      .addons-grid { grid-template-columns: repeat(2, 1fr); }
+      .addon:nth-child(odd) { border-left: 0; }
+      .addon:nth-child(even) { border-left: 1px solid var(--hairline); }
+      .addon:nth-child(-n+2) { border-bottom: 1px solid var(--hairline); }
+    }
+
+    /* ============ GALLERY ============ */
+    .gallery-line { margin-top: 1.25rem; max-width: 52ch; }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 3.5rem;
+      border-top: 1px solid var(--hairline);
+      border-left: 1px solid var(--hairline);
+    }
+    .tile {
+      position: relative;
+      aspect-ratio: 3 / 4; /* portrait — matches how the work is shot */
+      background: var(--bg-deep);
+      overflow: hidden;
+      border-right: 1px solid var(--hairline);
+      border-bottom: 1px solid var(--hairline);
+    }
+    .tile-tag {
+      position: absolute;
+      top: 0.875rem;
+      left: 0.875rem;
+      z-index: 2;
+      font-family: var(--font-mono);
+      font-size: 0.5625rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.55);
+      border: 1px solid var(--hairline);
+      padding: 0.3125rem 0.625rem;
+    }
+    .tile-empty {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      line-height: 1.8;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      padding: 0 1rem;
+      text-align: center;
+      background:
+        linear-gradient(var(--hairline-ghost) 1px, transparent 1px) 50% 50% / 100% 33.34%,
+        linear-gradient(90deg, var(--hairline-ghost) 1px, transparent 1px) 50% 50% / 33.34% 100%;
+    }
+    .tile img {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(1) contrast(1.05);
+      transition: transform .8s var(--ease), filter .6s var(--ease);
+    }
+    .tile:hover img { transform: scale(1.04); filter: grayscale(0) contrast(1); }
+    @media (max-width: 639px) {
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* before/after comparison slider */
+    .ba-wrap { margin-top: 4.5rem; }
+    .ba {
+      position: relative;
+      margin-top: 1.5rem;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border: 1px solid var(--hairline);
+      background: var(--bg-deep);
+      cursor: ew-resize;
+    }
+    .ba:focus-within { outline: 1px solid var(--text-primary); outline-offset: 4px; }
+    .ba .ba-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(1) contrast(1.05);
+      transition: filter .6s var(--ease);
+    }
+    .ba:hover .ba-img { filter: grayscale(0) contrast(1); }
+    .ba-top {
+      position: absolute;
+      inset: 0;
+      clip-path: inset(0 calc(100% - var(--cut, 50%)) 0 0);
+    }
+    .ba-divider {
+      position: absolute;
+      top: 0; bottom: 0;
+      left: var(--cut, 50%);
+      width: 1px;
+      background: var(--text-primary);
+      z-index: 2;
+      pointer-events: none;
+    }
+    .ba-divider::after {
+      content: "\2194";
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 2.75rem;
+      height: 2.75rem;
+      display: grid;
+      place-items: center;
+      background: var(--bg-deep);
+      border: 1px solid var(--hairline-strong);
+      border-radius: 50%;
+      color: var(--text-primary);
+      font-size: 1rem;
+      line-height: 1;
+    }
+    .ba-chip {
+      position: absolute;
+      bottom: 1rem;
+      z-index: 2;
+      font-family: var(--font-mono);
+      font-size: 0.5625rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-primary);
+      background: rgba(0, 0, 0, 0.55);
+      border: 1px solid var(--hairline);
+      padding: 0.375rem 0.75rem;
+      pointer-events: none;
+    }
+    .ba-chip--after  { left: 1rem; }
+    .ba-chip--before { right: 1rem; }
+    .ba-range {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      margin: 0;
+      cursor: ew-resize;
+      z-index: 3;
+    }
+    @media (max-width: 639px) {
+      .ba { aspect-ratio: 4 / 3; }
+    }
+
+    /* ============ WHY / TRUST ============ */
+    .trust-rows { margin-top: 3.5rem; border-top: 1px solid var(--hairline); }
+    .trust {
+      display: grid;
+      grid-template-columns: minmax(8rem, 14rem) 1fr 1.6fr;
+      gap: 2rem;
+      align-items: baseline;
+      padding-block: 2.5rem;
+      border-bottom: 1px solid var(--hairline);
+      transition: background-color .5s var(--ease);
+    }
+    .trust:hover { background: rgba(255, 255, 255, 0.02); }
+    .trust-tag {
+      font-family: var(--font-mono);
+      font-size: 0.625rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .trust h3 {
+      font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+      letter-spacing: 0;
+      line-height: 1.25;
+    }
+    @media (max-width: 767px) {
+      .trust {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+        padding-block: 2rem;
+      }
+    }
+
+    /* ============ BOOKING / FINAL CTA ============ */
+    .booking {
+      background: var(--bg-deep);
+      position: relative;
+      overflow: hidden;
+    }
+    .booking::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: radial-gradient(ellipse 80% 60% at 50% 115%, rgba(255,255,255,0.06), transparent 70%);
+    }
+    .booking .wrap { position: relative; }
+    .booking .supporting { margin-top: 1.25rem; max-width: 44ch; }
+    .offer {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem 1.75rem;
+      flex-wrap: wrap;
+      margin-top: 2.5rem;
+      padding: 1.5rem 1.75rem;
+      border: 1px solid var(--hairline);
+      max-width: 46rem;
+    }
+    .offer-tag {
+      font-family: var(--font-mono);
+      font-size: 0.625rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-primary);
+      white-space: nowrap;
+    }
+    .offer p { font-size: 0.9375rem; color: var(--text-secondary); }
+    .mega-cta {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-top: 4rem;
+      padding: clamp(2rem, 5vw, 3.25rem) var(--pad-x);
+      border-block: 1px solid var(--hairline-strong);
+      text-decoration: none;
+      color: var(--text-primary);
+      font-family: var(--font-display);
+      font-weight: 500;
+      font-size: clamp(1.625rem, 5.5vw, 3.75rem);
+      letter-spacing: 0.02em;
+      line-height: 1;
+      text-transform: uppercase;
+      transition: background-color .45s var(--ease), color .45s var(--ease);
+    }
+    .mega-cta .mega-arrow {
+      font-family: var(--font-body);
+      transition: transform .45s var(--ease);
+    }
+    .mega-cta:hover { background: var(--text-primary); color: var(--bg-deep); }
+    .mega-cta:hover .mega-arrow { transform: translateX(0.5em); }
+    .mega-cta:focus-visible { outline: 1px solid var(--text-primary); outline-offset: -6px; }
+    .mega-note {
+      display: block;
+      margin-top: 1.5rem;
+      padding-inline: var(--pad-x);
+      font-family: var(--font-mono);
+      font-size: 0.625rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      text-align: right;
+    }
+
+    /* ============ CONTACT ============ */
+    .contact {
+      background: var(--bg-deep);
+      padding-block: 0 clamp(5rem, 12vw, 8.5rem);
+    }
+    .contact-inner {
+      border-top: 1px solid var(--hairline);
+      padding-top: clamp(3rem, 6vw, 4.5rem);
+    }
+    .contact-title {
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      letter-spacing: -0.01em;
+      line-height: 1.15;
+      margin-top: 1.25rem;
+    }
+    .contact-sub {
+      margin-top: 0.75rem;
+      color: var(--text-secondary);
+      max-width: 46ch;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border: 1px solid var(--hairline);
+      margin-top: 2.75rem;
+    }
+    .contact-cell {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      border-left: 1px solid var(--hairline);
+      padding: 1.75rem 1.5rem;
+      transition: background-color .4s var(--ease);
+    }
+    .contact-cell:first-child { border-left: 0; }
+    .contact-cell:hover { background: rgba(255, 255, 255, 0.025); }
+    .contact-label {
+      font-family: var(--font-mono);
+      font-size: 0.625rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .contact-value {
+      font-family: var(--font-display);
+      font-weight: 500;
+      font-size: 1.0625rem;
+      line-height: 1.35;
+      color: var(--text-primary);
+      word-break: break-word;
+      text-decoration: none;
+    }
+    a.contact-value:hover { text-decoration: underline; text-underline-offset: 4px; }
+    .cell-note {
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+    }
+    @media (max-width: 767px) {
+      .contact-grid { grid-template-columns: repeat(2, 1fr); }
+      .contact-cell { padding: 1.5rem 1rem; }
+      .contact-cell:nth-child(odd) { border-left: 0; }
+      .contact-cell:nth-child(even) { border-left: 1px solid var(--hairline); }
+      .contact-cell:nth-child(-n+2) { border-bottom: 1px solid var(--hairline); }
+      .contact-value { font-size: 0.9375rem; }
+    }
+
+    /* ============ FOOTER ============ */
+    footer {
+      background: var(--bg-deep);
+      border-top: 1px solid var(--hairline);
+      position: relative;
+      overflow: hidden;
+    }
+    footer::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: radial-gradient(ellipse 85% 55% at 50% 120%, rgba(255,255,255,0.05), transparent 70%);
+    }
+    .footer-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr 1.15fr;
+      gap: 3rem 2rem;
+      padding-block: 4.5rem 4rem;
+    }
+    .f-logo {
+      height: 110px;
+      width: auto;
+      display: block;
+      margin-bottom: 1rem;
+      margin-left: -14px; /* offsets the artwork's internal padding */
+    }
+    .f-tagline {
+      font-family: var(--font-mono);
+      font-size: 0.625rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .f-serving {
+      margin-top: 0.75rem;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      max-width: 26ch;
+    }
+    .f-col {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.875rem;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+    }
+    .f-head {
+      font-size: 0.625rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.375rem;
+    }
+    .f-col a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color .3s var(--ease);
+    }
+    .f-col a:hover { color: var(--text-primary); }
+    .f-col a::after {
+      content: "\2197"; /* ↗ on external links only */
+      display: none;
+      margin-left: 0.375rem;
+      font-size: 0.625rem;
+      color: var(--text-muted);
+    }
+    .f-col a[target="_blank"]::after { display: inline; }
+    .f-plain { color: var(--text-muted); }
+    .f-name { color: var(--text-secondary); }
+    .f-col .f-break { overflow-wrap: anywhere; }
+    /* oversized ghost wordmark */
+    .f-ghost {
+      position: relative;
+      text-align: center;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: min(7.5vw, 7.5rem);
+      line-height: 1;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.09);
+      user-select: none;
+      pointer-events: none;
+      padding-bottom: 2.75rem;
+    }
+    @supports not (-webkit-text-stroke: 1px #fff) {
+      .f-ghost { color: rgba(255, 255, 255, 0.06); }
+    }
+    .footer-bottom { position: relative; border-top: 1px solid var(--hairline); }
+    .footer-bottom .wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 2rem;
+      justify-content: space-between;
+      padding-block: 1.75rem;
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      letter-spacing: 0.08em;
+      line-height: 1.6;
+      color: var(--text-muted);
+    }
+    .footer-bottom a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color .3s var(--ease);
+    }
+    .footer-bottom a:hover { color: var(--text-primary); }
+    @media (max-width: 1023px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .f-brand { grid-column: 1 / -1; }
+    }
+    @media (max-width: 567px) {
+      .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    }
+
+    /* ============ REDUCED MOTION ============ */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+        transition-duration: .01ms !important;
+      }
+      html { scroll-behavior: auto; }
+      .hero-title .ch { transform: none; }
+      .scan, .cue-line { display: none; }
+      .js .reveal { opacity: 1; transform: none; }
+      .js .shut-line .shut-track { transform: none; }
+      .js .shut-line .shut-line-label { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="progress" role="presentation"></div>
+  <div class="noise" role="presentation"></div>
+
+  <header class="site-nav" id="nav">
+    <div class="wrap">
+      <a class="brand" href="#" aria-label="Midnight Detailing — home">
+        <img src="assets/logo/logo.png" alt="" aria-hidden="true"
+             onerror="this.style.display='none';">
+        <span class="wordmark">Midnight Detailing</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a class="nav-link" href="#services">Services</a>
+        <a class="nav-link" href="#work">Work</a>
+        <a class="nav-link" href="#contact">Contact</a>
+        <a class="cta cta--small" href="https://cal.com/midnight-detailing" target="_blank" rel="noopener">Book a detail</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero" aria-label="Midnight Detailing — Brookfield's precision detail studio">
+      <div class="hero-cols" aria-hidden="true"><div></div><div></div><div></div></div>
+      <div class="scan" aria-hidden="true"></div>
+      <div class="spot" aria-hidden="true"></div>
+      <div class="wrap">
+        <p class="eyebrow">Precision &middot; Care &middot; Perfection</p>
+        <h1 class="hero-title" aria-label="Midnight Detailing">
+          <span class="line" aria-hidden="true"><span class="ch" style="--i:0">M</span><span class="ch" style="--i:1">I</span><span class="ch" style="--i:2">D</span><span class="ch" style="--i:3">N</span><span class="ch" style="--i:4">I</span><span class="ch" style="--i:5">G</span><span class="ch" style="--i:6">H</span><span class="ch" style="--i:7">T</span></span>
+          <span class="line line--outline" aria-hidden="true"><span class="ch" style="--i:8">D</span><span class="ch" style="--i:9">E</span><span class="ch" style="--i:10">T</span><span class="ch" style="--i:11">A</span><span class="ch" style="--i:12">I</span><span class="ch" style="--i:13">L</span><span class="ch" style="--i:14">I</span><span class="ch" style="--i:15">N</span><span class="ch" style="--i:16">G</span></span>
+        </h1>
+        <p class="subline">Showroom finish, delivered with obsessive precision.</p>
+        <div class="hero-actions">
+          <a class="cta" href="https://cal.com/midnight-detailing" target="_blank" rel="noopener">Book a detail</a>
+          <a class="ghost-link" href="#work">View the work</a>
+        </div>
+      </div>
+      <div class="hero-hud" aria-hidden="true">
+        <span class="scroll-cue">Scroll <span class="cue-line"></span></span>
+        <span class="hud-meta">INT / EXT / FULL &mdash; By appointment &mdash; Brookfield, WI</span>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="marquee-seg"><span>Foam &amp; hand wash</span><span>&middot;</span><span>Tire shine</span><span>&middot;</span><span>Interior protectant</span><span>&middot;</span><span>Trim shine</span><span>&middot;</span><span>Odor removal</span><span>&middot;</span><span>Paint wax</span><span>&middot;</span></div>
+        <div class="marquee-seg"><span>Foam &amp; hand wash</span><span>&middot;</span><span>Tire shine</span><span>&middot;</span><span>Interior protectant</span><span>&middot;</span><span>Trim shine</span><span>&middot;</span><span>Odor removal</span><span>&middot;</span><span>Paint wax</span><span>&middot;</span></div>
+      </div>
+    </div>
+
+    <section class="section-pad" id="services" aria-labelledby="services-header">
+      <div class="wrap">
+        <p class="eyebrow reveal">Exterior &middot; Interior &middot; Full</p>
+        <h2 class="section-header reveal" id="services-header">Services</h2>
+        <div class="svc-toolbar reveal">
+          <span class="toolbar-note">Pricing by vehicle size</span>
+          <div class="veh-toggle" role="group" aria-label="Vehicle type">
+            <button class="veh-btn" type="button" data-veh="car" aria-pressed="true">Cars</button>
+            <button class="veh-btn" type="button" data-veh="suv" aria-pressed="false">SUVs / Trucks</button>
+            <button class="veh-btn" type="button" data-veh="van" aria-pressed="false">Large / Vans</button>
+          </div>
+        </div>
+        <div class="services-grid">
+          <article class="service reveal" data-ghost="INT">
+            <span class="svc-tag">SVC / INT</span>
+            <h3>Interior Detail</h3>
+            <p class="service-desc">Every surface inside the cabin, restored to factory-clean.</p>
+            <ul>
+              <li>Vacuum and deep clean</li>
+              <li>Wipe-down of all surfaces</li>
+              <li>Interior protectant</li>
+              <li>Floor mat and carpet shine</li>
+              <li>Interior window wash</li>
+            </ul>
+            <div class="price-row">
+              <span class="price-label veh-label">Cars</span>
+              <span class="price" data-svc="int">$50</span>
+            </div>
+          </article>
+          <article class="service reveal" data-ghost="EXT">
+            <span class="svc-tag">SVC / EXT</span>
+            <h3>Exterior Detail</h3>
+            <p class="service-desc">Paint, wheels, and glass brought back to a flawless finish.</p>
+            <ul>
+              <li>Pre-rinse, foam and hand wash</li>
+              <li>Tire shine</li>
+              <li>Exterior window wash</li>
+              <li>Trim shine</li>
+            </ul>
+            <div class="price-row">
+              <span class="price-label veh-label">Cars</span>
+              <span class="price" data-svc="ext">$60</span>
+            </div>
+          </article>
+          <article class="service reveal" data-ghost="FULL">
+            <span class="svc-tag">SVC / FULL<span class="svc-pop">Most popular</span></span>
+            <h3>The Midnight Standard</h3>
+            <p class="service-desc">Full interior and exterior treatment. Our complete service, nothing skipped.</p>
+            <ul>
+              <li>Full interior detail</li>
+              <li>Full exterior detail</li>
+              <li>Final inspection under detailing lights</li>
+            </ul>
+            <div class="price-row">
+              <span class="price-label veh-label">Cars</span>
+              <span class="price" data-svc="full">$90</span>
+            </div>
+          </article>
+        </div>
+        <div class="addons reveal">
+          <p class="eyebrow">Add-on services</p>
+          <div class="addons-grid">
+            <div class="addon">
+              <span class="addon-name">Exterior paint wax</span>
+              <span class="addon-price">+$20</span>
+            </div>
+            <div class="addon">
+              <span class="addon-name">Odor removal</span>
+              <span class="addon-price">+$15</span>
+            </div>
+            <div class="addon">
+              <span class="addon-name">Rain-repellent windshield treatment</span>
+              <span class="addon-price">+$20</span>
+            </div>
+            <div class="addon">
+              <span class="addon-name">Engine bay cleaning</span>
+              <span class="addon-price">+$30</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="shut-line" role="presentation"><span class="shut-track"></span><span class="shut-line-label">Recent Work</span></div>
+
+    <section class="section-pad" id="work" aria-labelledby="gallery-header">
+      <div class="wrap">
+        <p class="eyebrow reveal">Documented results</p>
+        <h2 class="section-header reveal" id="gallery-header">The work</h2>
+        <p class="gallery-line reveal">Recent details, documented before we hand back the keys.</p>
+        <div class="gallery-grid">
+          <div class="tile reveal">
+            <span class="tile-tag" aria-hidden="true">Mazda / 01</span>
+            <span class="tile-empty" aria-hidden="true">Photo coming soon</span>
+            <img src="assets/gallery/web/mazda-01.jpg" alt="Freshly washed red SUV in the driveway, front view" loading="lazy" onerror="this.style.display='none';">
+          </div>
+          <div class="tile reveal">
+            <span class="tile-tag" aria-hidden="true">Mazda / 02</span>
+            <span class="tile-empty" aria-hidden="true">Photo coming soon</span>
+            <img src="assets/gallery/web/mazda-02.jpg" alt="Red SUV mid-detail with suds rinsed off the paint" loading="lazy" onerror="this.style.display='none';">
+          </div>
+          <div class="tile reveal">
+            <span class="tile-tag" aria-hidden="true">Mazda / 03</span>
+            <span class="tile-empty" aria-hidden="true">Photo coming soon</span>
+            <img src="assets/gallery/web/mazda-03.jpg" alt="Red SUV side profile after an exterior detail, sun catching the paint" loading="lazy" onerror="this.style.display='none';">
+          </div>
+          <div class="tile reveal">
+            <span class="tile-tag" aria-hidden="true">Mercedes / 01</span>
+            <span class="tile-empty" aria-hidden="true">Photo coming soon</span>
+            <img src="assets/gallery/web/mercedes-01.jpg" alt="Black Mercedes SUV after a full detail, front three-quarter view" loading="lazy" onerror="this.style.display='none';">
+          </div>
+          <div class="tile reveal">
+            <span class="tile-tag" aria-hidden="true">Mercedes / 02</span>
+            <span class="tile-empty" aria-hidden="true">Photo coming soon</span>
+            <img src="assets/gallery/web/mercedes-03.jpg" alt="Detailed black Mercedes with polished AMG wheel in the foreground" loading="lazy" onerror="this.style.display='none';">
+          </div>
+          <div class="tile reveal">
+            <span class="tile-tag" aria-hidden="true">Mercedes / 03</span>
+            <span class="tile-empty" aria-hidden="true">Photo coming soon</span>
+            <img src="assets/gallery/web/mercedes-04.jpg" alt="Black Mercedes front end after detailing, grille and headlights gleaming" loading="lazy" onerror="this.style.display='none';">
+          </div>
+        </div>
+        <div class="ba-wrap reveal">
+          <p class="eyebrow">The difference &mdash; drag to compare</p>
+          <div class="ba" style="--cut:50%">
+            <img class="ba-img" src="assets/gallery/web/tire-before.jpg" alt="Wheel and tire before detailing, dull with brake dust" loading="lazy">
+            <div class="ba-top" aria-hidden="true">
+              <img class="ba-img" src="assets/gallery/web/tire-after.jpg" alt="" loading="lazy">
+            </div>
+            <span class="ba-divider" aria-hidden="true"></span>
+            <span class="ba-chip ba-chip--after" aria-hidden="true">After</span>
+            <span class="ba-chip ba-chip--before" aria-hidden="true">Before</span>
+            <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Drag to compare the wheel before and after detailing">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="shut-line" role="presentation"><span class="shut-track"></span><span class="shut-line-label">Brookfield, WI</span></div>
+
+    <section class="section-pad" id="why" aria-labelledby="why-header">
+      <div class="wrap">
+        <p class="eyebrow reveal">The standard</p>
+        <h2 class="section-header reveal" id="why-header">Why Midnight Detailing</h2>
+        <div class="trust-rows">
+          <article class="trust reveal">
+            <span class="trust-tag">Detail</span>
+            <h3>Attention to detail, every time</h3>
+            <p>Every panel, seam, and surface is inspected before we call it finished.</p>
+          </article>
+          <article class="trust reveal">
+            <span class="trust-tag">Products</span>
+            <h3>Premium products</h3>
+            <p>Safe, effective products on every surface we touch &mdash; inside and out.</p>
+          </article>
+          <article class="trust reveal">
+            <span class="trust-tag">Care</span>
+            <h3>Expert care you can trust</h3>
+            <p>Local, independent, and built on repeat clients across the Brookfield area.</p>
+          </article>
+          <article class="trust reveal">
+            <span class="trust-tag">Guarantee</span>
+            <h3>Satisfaction guaranteed</h3>
+            <p>If something isn&rsquo;t right, we make it right.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="shut-line" role="presentation"><span class="shut-track"></span><span class="shut-line-label">Bookings</span></div>
+
+    <section class="booking section-pad" id="booking" aria-labelledby="booking-header">
+      <div class="wrap">
+        <p class="eyebrow reveal">Bookings open</p>
+        <h2 class="section-header reveal" id="booking-header">Your next detail starts here</h2>
+        <p class="supporting reveal">Slots are limited each week. Pick a time that fits.</p>
+        <div class="offer reveal">
+          <span class="offer-tag">Refer a friend / &minus;10%</span>
+          <p>Take 10% off your next detail when someone you refer becomes a customer.</p>
+        </div>
+      </div>
+      <a class="mega-cta reveal" href="https://cal.com/midnight-detailing" target="_blank" rel="noopener">
+        <span class="mega-label">Book a detail</span>
+        <span class="mega-arrow" aria-hidden="true">&rarr;</span>
+      </a>
+      <span class="mega-note" aria-hidden="true">Online scheduling &mdash; under a minute</span>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-header">
+      <div class="wrap">
+        <div class="contact-inner">
+          <p class="eyebrow">Contact</p>
+          <h2 class="contact-title" id="contact-header">Questions before you book?</h2>
+          <p class="contact-sub">Call, write, or just grab a slot online &mdash; we&rsquo;ll take it from there.</p>
+          <div class="contact-grid">
+            <div class="contact-cell">
+              <span class="contact-label">Phone</span>
+              <a class="contact-value" href="tel:+12626669820">(262) 666-9820</a>
+              <span class="cell-note">Call or text</span>
+            </div>
+            <div class="contact-cell">
+              <span class="contact-label">Email</span>
+              <a class="contact-value" href="mailto:Midnight.detailingra@gmail.com">Midnight.detailingra<wbr>@gmail.com</a>
+              <span class="cell-note">Quotes and questions</span>
+            </div>
+            <div class="contact-cell">
+              <span class="contact-label">Service area</span>
+              <span class="contact-value">Brookfield, WI</span>
+              <span class="cell-note">And nearby communities</span>
+            </div>
+            <div class="contact-cell">
+              <span class="contact-label">Hours</span>
+              <span class="contact-value">By appointment</span>
+              <span class="cell-note">Book online anytime</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap footer-grid">
+      <div class="f-brand">
+        <img class="f-logo" src="assets/logo/lockup.png" alt="Midnight Detailing" loading="lazy" onerror="this.style.display='none';">
+        <p class="f-tagline">Precision &middot; Care &middot; Perfection</p>
+        <p class="f-serving">Luxury car detailing, serving the Brookfield area.</p>
+      </div>
+      <nav class="f-col" aria-label="Site">
+        <span class="f-head">Site</span>
+        <a href="#services">Services</a>
+        <a href="#work">The work</a>
+        <a href="#why">Why us</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <nav class="f-col" aria-label="Booking">
+        <span class="f-head">Book</span>
+        <a href="https://cal.com/midnight-detailing" target="_blank" rel="noopener">Book a detail</a>
+        <a href="#services">Pricing &amp; add-ons</a>
+        <a href="#booking">Refer a friend &mdash; 10% off</a>
+      </nav>
+      <div class="f-col">
+        <span class="f-head">The Team</span>
+        <span class="f-name">Aryav Agarwal</span>
+        <span class="f-name">Rohit Shetty</span>
+        <span class="f-name">Ayush Damodar</span>
+      </div>
+      <nav class="f-col" aria-label="Reach us">
+        <span class="f-head">Reach us</span>
+        <!-- TODO: replace # with the business Instagram URL -->
+        <a href="#">Instagram</a>
+        <a href="https://cal.com/midnight-detailing" target="_blank" rel="noopener">Cal.com</a>
+        <a href="tel:+12626669820">(262) 666-9820</a>
+        <a class="f-break" href="mailto:Midnight.detailingra@gmail.com">Midnight.detailingra@gmail.com</a>
+      </nav>
+    </div>
+    <div class="f-ghost" aria-hidden="true">Midnight Detailing</div>
+    <div class="footer-bottom">
+      <div class="wrap">
+        <p>&copy; 2026 Midnight Detailing. All rights reserved.</p>
+        <p>Website built by <a href="https://github.com/shiva-dev-229" target="_blank" rel="noopener">@shiva-dev-229</a></p>
+        <a href="#">Back to top &uarr;</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.documentElement.classList.add('js');
+
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    document.querySelectorAll('.reveal, .shut-line').forEach(function (el) { io.observe(el); });
+
+    var bar = document.getElementById('progress');
+    var nav = document.getElementById('nav');
+    var onScroll = function () {
+      var h = document.documentElement;
+      var max = h.scrollHeight - h.clientHeight;
+      bar.style.transform = 'scaleX(' + (max > 0 ? h.scrollTop / max : 0) + ')';
+      nav.classList.toggle('scrolled', h.scrollTop > 40);
+    };
+    addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    var PRICES = {
+      car: { int: 50, ext: 60,  full: 90,  label: 'Cars' },
+      suv: { int: 70, ext: 85,  full: 120, label: 'SUVs / Trucks' },
+      van: { int: 90, ext: 105, full: 160, label: 'Large Trucks / Vans' }
+    };
+    var vehBtns = document.querySelectorAll('.veh-btn');
+    vehBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var v = PRICES[btn.dataset.veh];
+        vehBtns.forEach(function (b) { b.setAttribute('aria-pressed', b === btn ? 'true' : 'false'); });
+        document.querySelectorAll('.price').forEach(function (p) {
+          p.textContent = '$' + v[p.dataset.svc];
+          p.classList.remove('bump');
+          void p.offsetWidth;
+          p.classList.add('bump');
+        });
+        document.querySelectorAll('.veh-label').forEach(function (l) { l.textContent = v.label; });
+      });
+    });
+
+    var ba = document.querySelector('.ba');
+    if (ba) {
+      ba.querySelector('.ba-range').addEventListener('input', function () {
+        ba.style.setProperty('--cut', this.value + '%');
+      });
+    }
+
+    var hero = document.querySelector('.hero');
+    if (matchMedia('(hover: hover) and (prefers-reduced-motion: no-preference)').matches) {
+      hero.addEventListener('mousemove', function (e) {
+        var r = hero.getBoundingClientRect();
+        hero.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+        hero.style.setProperty('--my', (e.clientY - r.top) + 'px');
+        hero.classList.add('spot-on');
+      });
+      hero.addEventListener('mouseleave', function () { hero.classList.remove('spot-on'); });
+    }
+  </script>
+
+</body>
+</html>

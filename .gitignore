@@ -1,0 +1,7 @@
+# macOS
+.DS_Store
+
+
+# Original photo sources (HEIC) — the site serves the converted JPEGs in assets/gallery/web/
+assets/gallery/mazda/
+assets/gallery/mercedes/
